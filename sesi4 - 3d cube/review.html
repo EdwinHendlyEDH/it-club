@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+
+        .container {
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+
+
+            /* grid */
+            display: grid;
+            gap: 5px;
+            padding: 5px;
+            grid-template-columns: repeat(3, 1fr);
+
+
+            /* transform */
+            /* transform: translateY(-100px); */
+            /* translateX(x) => (+) kekanan, (-) kekiri */
+            /* translateY(x) => (+) kebawah, (-) keatas */
+
+            /* rotate */
+            /* transform: rotateY(20deg); */
+
+            animation: animate 1s infinite alternate;
+        }
+
+        @keyframes animate {
+            0%{
+                transform: translateX(0);
+            }
+
+            50%{
+                transform: translateX(-500px) rotate(50deg) rotateX(100deg);
+            }
+
+            100%{
+                transform: translateX(500px) rotate(360deg);
+            }
+        }
+
+        .item {
+            background: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>

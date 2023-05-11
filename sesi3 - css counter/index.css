@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type='checkbox']{
+    display: none;
+}
+
+main {
+    display: flex;
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr); */
+    gap: 1rem; /*16px*/
+    counter-reset: css-counter 0; /*membuat counter*/
+    position: relative;
+}
+
+main::after{
+    content: "Increment Number: " counter(css-counter);
+    position: absolute;
+    bottom: -3rem;
+    font-size: .9rem;
+}
+
+.box label{
+    outline: 1px solid black;
+    display: block;
+    width: 80px;
+    height: 80px;
+    /* display: flex;
+    justify-content:center;
+    align-items: center; */
+
+    text-align: center;
+    line-height: 80px; /*sama dengan height element*/
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.box input:checked + label {
+    background: rgb(255, 213, 0);
+    outline: 3px solid black;
+}
+
+.box:has(input:checked + label[data-value='10']){
+    counter-increment: css-counter 10;
+}
+.box:has(input:checked + label[data-value='43']){
+    counter-increment: css-counter 43;
+}
+.box:has(input:checked + label[data-value='64']){
+    counter-increment: css-counter 64;
+}
+.box:has(input:checked + label[data-value='-15']){
+    counter-increment: css-counter -15;
+}
+.box:has(input:checked + label[data-value='100']){
+    counter-increment: css-counter 100;
+}
+.box:has(input:checked + label[data-value='999']){
+    counter-increment: css-counter 999;
+}
+.box:has(input:checked + label[data-value='1999']){
+    counter-increment: css-counter 1999;
+}
+.box:has(input:checked + label[data-value='800']){
+    counter-increment: css-counter 800;
+}
+.box:has(input:checked + label[data-value='1224']){
+    counter-increment: css-counter 1224;
+}
+.box:has(input:checked + label[data-value='8130']){
+    counter-increment: css-counter 8130;
+}
+.box:has(input:checked + label[data-value='758']){
+    counter-increment: css-counter 758;
+}
+.box:has(input:checked + label[data-value='8912']){
+    counter-increment: css-counter 8912;
+}
+

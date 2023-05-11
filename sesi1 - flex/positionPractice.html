@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 600px;
+            height: 800px;
+            border: 5px solid black;
+            margin: auto;
+            position: relative;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .biru {
+            background: blue;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .merah {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: red;
+        }
+
+        .hijau {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: green;
+        }
+
+        .kuning {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: yellow;
+        }
+
+        .sticky {
+            position: sticky;
+            background: black;
+            color: white;
+            font-size: 1rem;
+            margin: auto;
+            margin-top: 350px;
+            top: 50px;
+        }
+
+
+        /* nav start */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: dimgray;
+            padding: 16px;
+            color: white;
+            z-index: 1;
+        }
+
+        /* nav end */
+
+        /* container */
+        .container {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+       <div class="logo">
+        Logo.
+       </div> 
+    </nav>
+
+    <div class="container">
+        <div class="box biru"></div>
+        <div class="box merah"></div>
+        <div class="box hijau"></div>
+        <div class="box kuning"></div>
+        <div class="box sticky">STICKY</div>
+    </div>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
